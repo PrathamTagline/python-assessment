@@ -25,8 +25,6 @@ class linkList:
             print(current_node.data,end=" -> ")
             current_node = current_node.next
 
-    def reveserd(self):
-        pass
 
         
         
