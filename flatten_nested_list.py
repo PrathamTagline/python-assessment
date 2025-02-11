@@ -1,9 +1,8 @@
 def flatten_list(tempList):
     flat_list = []
-    temp = []
     for i in tempList:
         if isinstance(i ,list):
-            flatten_list(i)
+          flat_list.extend(flatten_list(i))
         else:
             flat_list.append(i)
     return flat_list
