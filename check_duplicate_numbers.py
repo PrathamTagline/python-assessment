@@ -11,5 +11,5 @@ def duplicate_number(tempList):
     
 numbers = [2, 4, 5, 2, 12, 44, 5, 1, 2, 3]
 
-a = duplicate_number(numbers)
-print(a)
+duplicate_numbers = duplicate_number(numbers)
+print(duplicate_numbers)

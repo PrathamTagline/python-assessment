@@ -19,5 +19,5 @@ def palindrome_string(string):
     return True
 
 
-a = "ababa"
-print(palindrome_string(a))
+string = "ababa"
+print(palindrome_string(string))

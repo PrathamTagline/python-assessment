@@ -1,6 +1,3 @@
-sorted_list_1 = [1,4,5,6,7]
-sorted_list_2 = [1,2,3,5,8,9,11]
-
 def single_sorted_list(list1,list2):
     i,j = 0,0
     new_sorted_list = []
@@ -33,5 +30,8 @@ def single_sorted_list(list1,list2):
             new_sorted_list.append(list1[i])
             i += 1
     return new_sorted_list
+
+sorted_list_1 = [1,4,5,6,7]
+sorted_list_2 = [1,2,3,5,8,9,11]
 
 print(single_sorted_list(sorted_list_1,sorted_list_2))
