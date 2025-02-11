@@ -1,0 +1,86 @@
+Tricky Python Theory Questions
+1. What is the difference between shallow copy and deep copy in Python?   Explain with examples when and why you would use one over the other.
+
+shallow copy : - if we change in copy of original think its also reflect in the original think then its copy tell as a shallow copy
+deep copy : - if we change in copy of original think its not reflect in the original think then its copy tell as a deep copy
+    
+    example : -
+        list1 = [1,2,3,4,[5,6]]
+        list2 = list1.copy()
+        list2[0] = 99
+        list2[4][0] = 100
+
+        print(list1)
+        print(list2)
+
+        output : - 
+            [1,2,3,4,[100,6]]   => list1 
+            [99,2,3,4,[100,6]]  => list2 
+
+    here during to the copy of the list1 the elements of the list1 in deep copy but  during to the copy nested list of the list1 only address of that nested list ([5,6]) was copy 
+    - so,that if we make change in that nested list which shallow copy in the list2 is also reflected in the list1 nested list 
+    - And if we change in the elements which the deeply copyed in the list3 is doesn't refelcted in the list1 
+
+
+
+2. How does Python’s memory management work?   Discuss the concept of reference counting, garbage collection, and the role of the `gc` module.
+3. What is the Global Interpreter Lock (GIL) in Python?   Explain how it affects multithreading in Python and why Python cannot fully utilize multi-core processors for parallel execution.
+
+
+4. What are Python’s mutable and immutable data types? Explain the differences, with examples, and discuss how mutability impacts performance and memory management.
+    
+    immutable onejects : string,tuple,frozenset
+    mutable : list,dictionary 
+
+    - immutable : - we doesn't modification in that object 
+    - mutable : - we modification in that object
+
+    example :
+        string = "apple"
+        string[0] = "p"
+        print(string)
+
+        list1 = [1,2,3,4]
+        list1[0] = 21
+        print(list1)
+
+        output : 
+            apple
+            [21,2,3,4]
+
+        here string is immutable so we can't modification in the string charcters 
+        and list is mutable so we can modification the list elements
+    
+
+
+5. Explain how Python’s `__init__` and `__new__` methods work in object-oriented programming.   What is the difference between them, and when would you use one over the other?
+
+    The main difference between is and == in Python is their purpose and how they compare objects:
+    
+    is operator:
+        Checks for object identity (if two variables point to the exact same object in memory)
+        Compares the memory addresses of objects
+        Generally faster than ==
+
+    
+    == operator:
+        Checks for value equality (if two objects have the same value)
+        Compares the contents or values of objects
+        Can be overridden by classes to define custom equality behavior
+
+
+6. What is the purpose of decorators in Python?   Discuss how decorators work, including how they can be used for logging, authentication, and more.
+7. Explain the difference between `is` and `==` in Python.   When should you use `is` and when should you use `==`? Provide examples to support your explanation.
+8. How does Python handle variable scope and name resolution?   Explain the LEGB (Local, Enclosing, Global, Built-in) rule with examples.
+9. What are Python’s built-in `staticmethod` and `classmethod`?   Discuss their differences, and provide an example of when each would be used.
+10. What are the differences between Python 2 and Python 3?    Highlight the key changes between the two versions and how they affect coding style and functionality.
+11. What is a Python generator, and how does it differ from a function?    Explain the `yield` keyword, how generators work, and the benefits of using them for large datasets.
+12. What is the difference between a list comprehension and a generator expression?    Discuss the syntax and memory efficiency differences between the two.
+13. Explain Python’s `with` statement and how context managers work.    What are context managers, and how does the `with` statement simplify resource management like file handling?
+14. What is the difference between `@staticmethod`, `@classmethod`, and `@property` in Python?    Explain the role of each decorator with examples, and when to use them.
+15. Explain how Python’s exception handling mechanism works.    Discuss the purpose of `try`, `except`, `else`, and `finally` blocks, and when to use each.
+16. What are Python's lambda functions? How do they differ from regular functions?    Explain the syntax and use cases for `lambda` functions in Python.
+17. What is the difference between a tuple and a list in Python?    Discuss the key differences, including performance, mutability, and use cases.
+18. What is the role of `self` in Python classes?    Explain its significance in instance methods and how it is used to refer to instance variables.
+19. How do Python's `set` and `frozenset` differ?    Discuss the characteristics and use cases for each, including immutability in `frozenset`.
+20. What is the difference between `*args` and `**kwargs`?    Explain how these special arguments work, including their use in function definitions and the order in which they appear.
