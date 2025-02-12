@@ -11,4 +11,4 @@ def logest_word_in_string(string):
     return longest_word
 
 long_string = "the quickdsasdadasdsda brown fox jump over the lazy dog"
-print(logest_word_in_string(long_string))
+print(f"longest word : {logest_word_in_string(long_string)}")

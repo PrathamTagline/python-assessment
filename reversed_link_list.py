@@ -1,36 +1,49 @@
 class Node:
-    def __init__(self,data):
+    def __init__(self, data):
         self.data = data
         self.next = None
 
-class linkList:
+class LinkedList:
     def __init__(self):
         self.head = None
 
-    def insert_node_in_tail(self,data):
+    def append(self, data):
         new_node = Node(data)
-        if self.head is None:
+        if not self.head:
             self.head = new_node
             return
-        else:
-            print()
-            new_node.next = self.head
-            self.head = new_node
+        temp = self.head
+        while temp.next:
+            temp = temp.next
+        temp.next = new_node
 
+    def print_list(self):
+        temp = self.head
+        while temp:
+            print(temp.data, end=' -> ')
+            temp = temp.next
+        print("None")
 
-    def display(self):
-        
-        current_node = self.head
-        while current_node:
-            print(current_node.data,end=" -> ")
-            current_node = current_node.next
+    def reverse(self):
+        prev = None
+        current = self.head
+        while current:
+            next_node = current.next
+            current.next = prev
+            prev = current
+            current = next_node
+        self.head = prev
 
+# Example Usage
+ll = LinkedList()
+ll.append(1)
+ll.append(2)
+ll.append(3)
+ll.append(4)
 
-        
-        
+print("Original Linked List:")
+ll.print_list()
 
-a = linkList()
-a.insert_node_in_tail(21)
-a.insert_node_in_tail(22)
-
-print(a.display())
+ll.reverse()
+print("Reversed Linked List:")
+ll.print_list()

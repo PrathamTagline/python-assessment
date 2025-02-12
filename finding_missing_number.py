@@ -7,4 +7,4 @@ def finding_missing_number(givenList):
 
 given_list = [1,2,3,4,6,7]
 
-print(finding_missing_number(given_list)) 
+print(f"missing number : {finding_missing_number(given_list)}") 
