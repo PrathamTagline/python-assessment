@@ -32,4 +32,4 @@ def consonants_count(string):
 long_string = "When we run the above program, an innovators.csv file is created in the current working directory with the given entries."
 print(f"vowel count :  \n{vowel_count(long_string)}")
 print()
-print(f"vowconsonants count count :  \n{consonants_count(long_string)}")
+print(f"consonants count count :  \n{consonants_count(long_string)}")

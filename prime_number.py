@@ -1,7 +1,7 @@
 def prime_number(number):
-    for i in range(2,number):
+    for i in range(2,number//2):
         if number % i == 0:
-            return True
-    return False
+            return False
+    return True
 
-print(prime_number(22))
+print(prime_number(67))

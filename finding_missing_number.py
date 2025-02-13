@@ -1,8 +1,7 @@
 def finding_missing_number(givenList):
-    full_range_list = [number for number in range(1,given_list[-1])]
+    full_range_list = {number for number in range(1,given_list[-1])}
     given_list_in_set = set(given_list)
-    full_range_list_in_set = set(full_range_list)
-    missing_number = (full_range_list_in_set - given_list_in_set)
+    missing_number = (full_range_list - given_list_in_set)
     return missing_number
 
 given_list = [1,2,3,4,6,7]

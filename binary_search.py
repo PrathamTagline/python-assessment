@@ -1,5 +1,9 @@
 def binary_search(givenNumber,numberList):
+
+    # leading point and end point of the list ( it will change according to the following condition )
     ledingPoint,endingPoint = 0,len(numberList)
+
+    # this 
     while ledingPoint < endingPoint:
         centerPoint = ledingPoint + (endingPoint - ledingPoint) // 2
         if numberList[centerPoint] == givenNumber:

@@ -19,5 +19,5 @@ def palindrome_string(string):
     return True
 
 
-string = "ababa"
+string = "abbaba"
 print(palindrome_string(string))
